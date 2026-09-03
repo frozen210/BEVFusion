@@ -136,3 +136,29 @@ runs/*
 # torch hipify generated files
 *_hip.*
 *.hip
+
+# ===== Project-specific ignores =====
+# Model weights and checkpoints
+pretrained/
+checkpoints/
+*.pth
+*.pth.tar
+*.ckpt
+
+# Training and visualization artifacts
+work_dirs/
+viz/
+vis_results/
+.torchpack/
+wandb/
+events.out.tfevents.*
+
+# Deployment artifacts
+*.onnx
+*.engine
+*.plan
+*.om
+
+# nuScenes preprocessing artifacts
+nuscenes_infos_*.pkl
+nuscenes_dbinfos_*.pkl
